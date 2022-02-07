@@ -412,6 +412,17 @@ document.getElementById("waterButton").addEventListener("click", waterPet, false
 //some kind of selecta here
 
 
+const animalPortraits = [];
+
+
+
+
+const setPetPortrait = () => {
+    document.getElementById("boxScreen").style.backgroundImage = "cat.jpg";
+}
+
+setPetPortrait();
+
 
 //     doDeparture(n) {
 //     if (this._numVerified) {
