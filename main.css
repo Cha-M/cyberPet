@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Dongle', sans-serif;
+    color: pink;
     font-size: 4vh;
     
 }
@@ -26,16 +27,16 @@ body {
 .boxMiddle {
     border-bottom-left-radius: 20vw;
     border-bottom-right-radius: 20vw;
-    border-top-left-radius: 25vw;
-    border-top-right-radius: 25vw;
+    border-top-left-radius: 20vw;
+    border-top-right-radius: 20vw;
     border: 2px blueviolet solid;
     
     background-image: radial-gradient(blueviolet, red);
     flex: 1;
     min-width: 55vw;
     max-width: 55vw;
-    min-height: 90vh;
-    max-height: 90vh;
+    min-height: 95vh;
+    max-height: 95vh;
 
     display: flex;
 
@@ -50,7 +51,9 @@ body {
 
 .upperLowerBox {
     border-radius: 10vw;
-    border: 2px rgb(0, 255, 64) solid;
+    box-shadow: 2px 2px 2px purple;
+    background-image: radial-gradient(blueviolet, red);
+    /* border: 2px rgb(0, 255, 64) solid; */
     /* background-color: cyan; */
 
     flex: 1;
@@ -75,14 +78,44 @@ body {
 
 .upperLowerBox2 {
     border-radius: 10vw;
-    border: 2px rgb(0, 255, 64) solid;
+    /* box-shadow: 2px 2px 2px purple; */
+    /* border: 2px rgb(0, 255, 64) solid; */
+    /* background-color: cyan; */
+
+    /* margin: 10px; */
+    
+    flex: 1;
+    line-height: 3vh;
+    min-width: 10%;
+    max-width: 10%;
+
+    min-height: 65%;
+    max-height: 80%;
+
+    display: flex;
+
+    flex-direction: column;
+    
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    align-content: space-around;
+    text-align: center;
+
+
+}
+
+.upperLowerBox2.hide {
+    border-radius: 10vw;
+    /* box-shadow: 2px 2px 2px purple; */
+    /* border: 2px rgb(0, 255, 64) solid; */
     /* background-color: cyan; */
 
     flex: 1;
     min-width: 10%;
     max-width: 10%;
 
-    min-height: 80%;
+    min-height: 65%;
     max-height: 80%;
 
     display: flex;
@@ -100,15 +133,16 @@ body {
 
 .upperLayoutRow {
     border-radius: 10vw;
-    border: 2px rgb(0, 255, 64) solid;
+    box-shadow: 2px 2px 2px purple;
+    /* border: 2px rgb(0, 255, 64) solid; */
     /* background-color: green; */
 
     flex: 1;
     min-width: 75%;
     max-width: 75%;
 
-    min-height: 55%;
-    max-height: 55%;
+    min-height: 70%;
+    max-height: 70%;
 
     display: flex;
 
@@ -125,15 +159,27 @@ body {
 
 /* screen */
 .boxScreen {
-    border-radius: 10vw;
-    border: 2px rgb(0, 255, 64) solid;
-    background-color: white;
+    border-radius: 20vw;
+    box-shadow: 2px 2px 2px purple;
+    /* border: 2px rgb(0, 255, 64) solid; */
+    /* background-color: white; */
 
     flex: 1;
+    margin: 3vh;
     min-width: 80%;
     max-width: 80%;
-    min-height: 80%;
-    max-height: 80%;
+    min-height: 90%;
+    max-height: 90%;
+
+    display: flex;
+
+    flex-direction: column;
+    
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    align-content: space-around;
+    text-align: center;
 
 
 }
@@ -143,7 +189,8 @@ body {
 /* left button give water? */
 .boxMenu {
     border-radius: 10vw;
-    border: 2px rgb(0, 255, 64) solid;
+    box-shadow: 2px 2px 2px purple;
+    /* border: 2px rgb(0, 255, 64) solid; */
     /* background-color: cyan; */
 
     flex: 1;
@@ -166,9 +213,9 @@ body {
 
 .boxButton {
     border-radius: 10vw;
-    border: 2px rgb(0, 255, 64) solid;
+    /* border: 2px blueviolet solid; */
     /* background-color: blueviolet; */
-    background-image: radial-gradient(blueviolet, red);
+    background-image: radial-gradient(blueviolet, crimson);
     cursor: pointer;
 
     flex: 1;
@@ -183,34 +230,36 @@ body {
     align-items: center;
     justify-content: space-around;
 
+    /* not working */
+    /* transition: background-image 0.5s linear; */
+
+    box-shadow: 2px 2px 2px purple;
+    transition-duration: 0.4s;
+
 }
 
 .boxButton:hover {
-    background-image: radial-gradient(blueviolet, white);
+    background-image: radial-gradient(blueviolet, pink);
 }
 
 .boxStat {
     border-radius: 10vw;
-    border: 2px rgb(0, 255, 64) solid;
-    background-color: blueviolet;
+    /* border: 2px rgb(4, 0, 255) solid; */
+    box-shadow: 2px 2px 2px purple;
+    background-image: radial-gradient(blueviolet, crimson);
 
-    flex: 1;
-    min-width: 10%;
-    max-width: 10%;
+    /* flex: 1; */
+    min-width: 100%;
+    /* max-width: 10%; */
 
-    min-height: 10%;
-    max-height: 10%;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    /* min-height: 10%; */
 
 }
 
-.boxSubScreen {
+.boxNameScreen {
     border-radius: 10vw;
-    border: 2px rgb(0, 255, 64) solid;
+    box-shadow: 2px 2px 2px purple;
+    /* border: 2px rgb(0, 255, 64) solid; */
     /* background-color: cyan; */
 
     flex: 1;
@@ -232,5 +281,37 @@ body {
 
 }
 
-/* mb enable box after name entered, switch out buttonx */
+.innerAnimalPicture {
+    background-image: url('bun.png');
 
+    border-radius: 20vw;
+    /* border: 2px black dashed; */
+    /* background-color: white; */
+
+    flex: 1;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    visibility: visible;
+    
+    
+}
+
+.innerAnimalPicture.hide {
+    border-radius: 10vw;
+    border: 2px black dashed;
+    /* background-color: white; */
+
+    flex: 1;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    visibility: hidden;
+
+}
+
+
+
+/* mb enable box after name entered, switch out buttonx */

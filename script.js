@@ -156,20 +156,23 @@ const die100 = () => {
 }
 
 const foodDiet = {
-    hamburger: 1,
-    dandelions: 0
+    "hamburger" : 1,
+    "dandelions" : 0
 }
 
-const statGrades = {120: "S", 100: "A", 80: "B", 60: "C", 40: "D", 20: "E", 0: "F"};
+const statGrades = {100: "A", 80: "B", 60: "C", 40: "D", 20: "E", 0: "F"};
 
 const gradeFromStat = (stat) => {
-
-    if (stat >= 0) {
+    if (stat >= 120) {
+        // console.log(stat - (stat % 20));
+        return "S";
+    }
+    else if (stat >= 0) {
         // console.log(stat - (stat % 20));
         return statGrades[stat - (stat % 20)];
     }
     else {
-        return ":("
+        return "X"
     }
 
 }
@@ -244,19 +247,28 @@ class Pets {
         return this._ailments;
     }
 
+    get herbCarn() {
+        return this._herbCarn;
+    }
+
     feed(food) {
-        if (foodDiet.food == this._herbCarn) {
-            console.log(this._hunger);
-            console.log("Food is good")
+        if (foodDiet[food] == this._herbCarn) {
+            
+            // console.log(this._hunger);
+            // console.log("Food is good")
             this._hunger += die50();
-            console.log(this._hunger);
+            // console.log(this._hunger);
             updateStatsDisplay();
         }
         else
         {
-            console.log("Oh no!")
+            // console.log("Oh no!")
+            // console.log("food", food);
+            // console.log("food", foodDiet.food);
+            // console.log("_herbCarn", this._herbCarn);
+            // console.log("herbCarn", this.herbCarn);
             this._hunger -= die50();
-            console.log(this._hunger);
+            // console.log(this._hunger);
             updateStatsDisplay();
         }
     }
@@ -350,19 +362,19 @@ class Bunny extends Pets {
 const newPet = (name) => {
     const oneNewPet = new Bunny(name);
     petsArray.push(oneNewPet);
-    console.log(petsArray)
+    // console.log(petsArray)
 
     for (let x of petsArray)
     {
         console.log(x._name);
     }
+
+    setPetPortrait();
     currentPet++;
 }
 
 let nameForCall = "Fluffy";
-let foodForCall = "Dandelions";
-
-
+let foodForCall = "dandelions";
 
 
 const setNewPetName = (name) => {
@@ -404,7 +416,7 @@ Thirst
 </div>
 <div class = "boxStat" id ="displayHunger"> */}
 
-//grey out ineffectual buttonx
+//grey out ineffectual buttons
 document.getElementById("newPetButton").addEventListener("click", newPetNoArgs, false);
 document.getElementById("feedButton").addEventListener("click", feedNoArgs, false);
 document.getElementById("waterButton").addEventListener("click", waterPet, false);
@@ -418,10 +430,10 @@ const animalPortraits = [];
 
 
 const setPetPortrait = () => {
-    document.getElementById("boxScreen").style.backgroundImage = "cat.jpg";
+    console.log(document.getElementById("innerScreenImage"));
+    document.getElementById("innerScreenImage").className = "innerAnimalPicture";
 }
 
-setPetPortrait();
 
 
 //     doDeparture(n) {
